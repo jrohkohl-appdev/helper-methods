@@ -1,0 +1,26 @@
+<h1> Edit <%= @director.name %> </h1>
+
+<%= form_with(model: @director) do |form|%>
+
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div>
+    <%= form.label :dob, "Date of Birth" %>
+    <%= form.date_field :dob %>
+  </div>
+
+  <div>
+    <%= form.label :country_of_birth, "Country of Birth" %>
+    <%= form.text_area :country_of_birth %>
+  </div>
+
+
+  <%= form.button %>
+
+
+
+<% end %>

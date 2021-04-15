@@ -1,0 +1,78 @@
+<h1>
+  List of all directors
+</h1>
+
+<hr>
+
+<div>
+  <%= link_to "Add New Director", new_director_path %>
+</div>
+
+
+<div>
+  <%= link_to "See Movies", movies_path %>
+</div>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+      Date of Birth
+    </th>
+
+    <th>
+      Country of Birth
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @directors.each do |director| %>
+  <tr>
+    <td>
+      <%= director.id %>
+    </td>
+
+    <td>
+      <%= director.name %>
+    </td>
+
+    <td>
+      <%= director.dob %>
+    </td>
+
+    <td>
+      <%= director.country_of_birth %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(director.created_at) %> ago
+    </td>
+    <td>
+      <%= time_ago_in_words(director.updated_at) %> ago
+    </td>
+
+    <td>
+      <%= link_to "Show details", director %>
+    </td>
+  </tr>
+  <% end %>
+</table>

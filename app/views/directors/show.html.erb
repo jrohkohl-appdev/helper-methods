@@ -1,0 +1,63 @@
+<h1>
+<%= @director.name %> Details
+</h1>
+<hr>
+<div>
+  <%= link_to "Go Back", directors_path%>
+</div>
+<div>
+  <%= link_to "Edit", edit_director_path(@director)%>
+</div>
+<div>
+  <%= link_to "Delete", director_path(@director), method: :delete%>
+</div>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <td>
+      <%= @director.id%>
+    </td>
+  </tr>
+  
+  <tr>
+
+    <th>
+      Name
+    </th>
+
+    <td>
+      <%= @director.name %>
+    </td>
+
+  </tr>
+
+  <tr>
+    <th>
+      Date of Birth
+    </th>
+
+    <td>
+
+    <%= @director.dob%>
+
+    </td>
+  </tr>
+
+  <tr>
+
+    <th>
+      Country of Birth
+    </th>
+
+    <td>
+      <%= @director.country_of_birth%>
+    </td>
+
+  </tr>
+</table>
