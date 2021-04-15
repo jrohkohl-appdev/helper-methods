@@ -71,4 +71,5 @@ group :development do
   gem 'rubocop-rails'
   gem 'skylight'
   gem 'web_git', github: 'firstdraft/web_git', branch: 'spring2020'
+  gem "draft_generators", :git => "https://github.com/firstdraft/draft_generators", :branch => "winter-2020"
 end
